@@ -18,10 +18,10 @@ import { logAction } from '../../handlers/handleLogging';
 import { getLinkedRobloxUser } from '../../handlers/accountLinks';
 import { provider } from '../../database/router';
 
-class ExileCommand extends Command {
+class FireCommand extends Command {
     constructor() {
         super({
-            trigger: 'exile',
+            trigger: 'fire',
             description: 'Exiles a user from the Roblox group.',
             type: 'ChatInput',
             module: 'admin',
@@ -102,4 +102,4 @@ class ExileCommand extends Command {
     }
 }
 
-export default ExileCommand;
+export default FireCommand;
