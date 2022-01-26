@@ -21,21 +21,21 @@ class GroupBanCommand extends Command {
     constructor() {
         super({
             trigger: 'groupban',
-            description: 'Bans someone from the group',
+            description: 'Blacklists someone.',
             type: 'ChatInput',
             module: 'admin',
             args: [
                 {
                     trigger: 'roblox-user',
-                    description: 'Who do you wish to ban from the group?',
+                    description: 'Who do you wish to blacklist?',
                     autocomplete: true,
                     required: true,
                     type: 'RobloxUser'
                 },
                 {
                     trigger: 'reason',
-                    description: 'If you would like a reason to be supplied in the logs, put it here.',
-                    required: false,
+                    description: 'Reason for blacklisting?',
+                    required: true,
                     type: 'String'
                 }
             ],
