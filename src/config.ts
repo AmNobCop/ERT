@@ -1,35 +1,35 @@
 import { BotConfig } from './structures/types'; 
 
 export const config: BotConfig = {
-    groupId: 0,
+    groupId: 5571247,
     slashCommands: true,
     legacyCommands: {
-        enabled: true,
+        enabled: false,
         prefixes: ['q!'],
     },
     permissions: {
         all: [''],
-        ranking: [''],
-        users: [''],
-        shout: [''],
-        join: [''],
+        ranking: ['827781617564254260'],
+        users: ['827781617564254260'],
+        shout: ['827781617564254260'],
+        join: ['827781617564254260'],
         signal: [''],
-        admin: [''],
+        admin: ['827781617564254260'],
     },
     logChannels: {
-        actions: '',
-        shout: '',
+        actions: '930942570949918760',
+        shout: '930942570949918760',
     },
     database: {
-        enabled: false,
+        enabled: true,
         type: 'mongodb',
     },
     api: false,
-    maximumRank: 255,
+    maximumRank: 240,
     verificationChecks: true,
     firedRank: 1,
     suspendedRank: 1,
-    recordManualActions: true,
+    recordManualActions: false,
     memberCount: {
         enabled: false,
         channelId: '',
@@ -56,10 +56,10 @@ export const config: BotConfig = {
         bypassRoleId: '',
     },
     activity: {
-        enabled: false,
+        enabled: true,
         type: 'WATCHING',
-        value: 'for commands.',
+        value: 'over ERT with Nob, Lepa, & South',
     },
-    status: 'online',
+    status: 'dnd',
     deleteWallURLs: false,
 }
