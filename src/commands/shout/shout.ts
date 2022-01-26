@@ -18,16 +18,16 @@ class ShoutCommand extends Command {
             args: [
                 {
                     trigger: 'content',
-                    description: 'What should the content of the shout be? If none, the shout will be cleared.',
+                    description: 'What should the shout be? To clear the shout leave this blank.',
                     autocomplete: true,
                     required: false,
                     type: 'String',
                 },
                 {
                     trigger: 'reason',
-                    description: 'If you would like a reason to be supplied in the logs, put it here.',
+                    description: 'Reason for updating the shout?',
                     isLegacyFlag: true,
-                    required: false,
+                    required: true,
                     type: 'String',
                 },
             ],
