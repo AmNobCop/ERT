@@ -465,7 +465,6 @@ export const getUserInfoEmbed = async (user: User | PartialUser, member: GroupMe
         .setFooter(`User ID: ${user.id}`)
         .setTimestamp()
         .addField('Role', `${member.role.name} (${member.role.rank})`, true)
-        .addField('XP', data.xp.toString() || '0', true)
         .addField('Suspended', data.suspendedUntil ? `✅ (<t:${Math.round(data.suspendedUntil.getTime() / 1000)}:R>)` : '❌', true)
         .addField('Banned', data.isBanned ? `✅` : '❌', true);
 
@@ -550,7 +549,7 @@ export const getJoinRequestsEmbed = (joinRequests: GroupJoinRequest[]): MessageE
     const embed = new MessageEmbed()
         .setAuthor('Join Requests', infoIconUrl)
         .setColor(mainColor)
-        .setDescription(`${joinRequests.length !== 0 ? `There is currently ${joinRequests.length} pending join requests:\n\n${requestString}` : 'There are currently no pending join requests.'}`);
+        .setDescription(`${joinRequests.length !== 0 ? `There are currently ${joinRequests.length} pending join requests:\n\n${requestString}` : 'There are currently no pending join requests.'}`);
 
     return embed;
 }
@@ -559,7 +558,7 @@ export const getSuccessfulGroupBanEmbed = (user: User | PartialUser) : MessageEm
     const embed = new MessageEmbed();
     embed.setAuthor("Success", checkIconUrl);
     embed.setColor(greenColor);
-    embed.setDescription(`**${user.name}** has successfully been banned from the group.`);
+    embed.setDescription(`**${user.name}** has successfully been blacklisted.`);
     return embed;
 }
 
@@ -567,6 +566,6 @@ export const getSuccessfulGroupUnbanEmbed = (user: User | PartialUser) : Message
     const embed = new MessageEmbed();
     embed.setAuthor("Success", checkIconUrl);
     embed.setColor(greenColor);
-    embed.setDescription(`**${user.name}** has successfully been unbanned from the group.`);
+    embed.setDescription(`**${user.name}** has successfully been unblacklisted.`);
     return embed;
 }
