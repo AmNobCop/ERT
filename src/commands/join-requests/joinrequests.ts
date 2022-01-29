@@ -22,7 +22,7 @@ class JoinRequestsCommand extends Command {
     }
 
     async run(ctx: CommandContext) {
-        const joinRequests = await robloxGroup.getJoinRequests({});
+        const joinRequests = await robloxGroup.getJoinRequests({limit: 100});
         return await ctx.reply({ embeds: [ getJoinRequestsEmbed(joinRequests.data) ] });
     }
 }
