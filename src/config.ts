@@ -58,7 +58,7 @@ export const config: BotConfig = {
     activity: {
         enabled: true,
         type: 'WATCHING',
-        value: 'over ERT with Nob, Lepa, & South',
+        value: 'over ERT!',
     },
     status: 'dnd',
     deleteWallURLs: false,
